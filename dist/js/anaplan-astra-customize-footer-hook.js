@@ -190,11 +190,13 @@ jQuery(document).ready(function($){
         return false;
     });
 
-    $(document).on("mouseup touchend",".uael-show", function(e){
+    /*
+    $(document).on("mouseup touchend",".uael-overlay", function(e){
+        console.log("clicking");
 		var thisParent = $(this).parent(".uael-modal-parent-wrapper");
 		var clickTarget = thisParent.find(".uael-close-icon");
 		clickTarget.trigger("click");
-	});
+	});*/
 
     /*$("body").click(function(e){
         e.preventDefault();
