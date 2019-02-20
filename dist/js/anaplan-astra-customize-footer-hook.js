@@ -79,6 +79,7 @@ jQuery(document).ready(function($){
         }
     }*/
 
+    var currentURL = window.location.href;
     if ( currentURL.indexOf('/search/') !== -1 ) {
         $('.jet-mobile-menu-cover').eq(0).css({'display':'none'});
     }
