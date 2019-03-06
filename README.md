@@ -3,16 +3,16 @@
 ## Folder structure
 
 * prod
-.....* scss
-..........* vendors
-..........* partials
-..........* modules
-.....* js
-..... function.php (include for routing and headers)
-..... css (required for any child theme)
+⋅⋅⋅⋅⋅* scss
+⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅* vendors
+⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅* partials
+⋅⋅⋅⋅⋅⋅⋅⋅⋅⋅* modules
+⋅⋅⋅⋅⋅* js
+⋅⋅⋅⋅⋅ function.php (include for routing and headers)
+⋅⋅⋅⋅⋅ css (required for any child theme)
 * dist
-.....* css
-.....* js
+⋅⋅⋅⋅⋅* css
+⋅⋅⋅⋅⋅* js
 
 ### Getting Started
 To get started, you'll need to install Node and NPM.
