@@ -1,17 +1,18 @@
 # Anaplan Boilerplate
 
 ## Folder structure
-*prod
-.....*scss
-..........*vendors
-..........*partials
-..........*modules
-.....*js
-.....function.php (include for routing and headers)
-.....css (required for any child theme)
-*dist
-.....*css
-.....*js
+
+* prod
+.....* scss
+..........* vendors
+..........* partials
+..........* modules
+.....* js
+..... function.php (include for routing and headers)
+..... css (required for any child theme)
+* dist
+.....* css
+.....* js
 
 ### Getting Started
 To get started, you'll need to install Node and NPM.
