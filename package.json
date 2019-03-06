@@ -1,7 +1,7 @@
 {
-  "name": "anaplan-astra-child",
+  "name": "anaplan-boilerplate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Boilerplate created to speed up the process of developing Wordpress sites within Anaplan.",
   "main": "index.js",
   "dependencies": {
     "gulp-clean-css": "^4.0.0",
