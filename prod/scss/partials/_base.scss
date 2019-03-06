@@ -1,0 +1,91 @@
+/*
+ * General sizes and color attributes
+ */
+ 
+* {
+	font-family: $base-sans-serif;
+	text-decoration: none;
+	text-transform: initial;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-size: 1.8rem;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+span,
+div {
+	font-family: $base-sans-serif;
+	color: $anaplan-grey-blue;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+button {
+	padding: $button-padding;
+}
+section {
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+}
+h1 {
+	font-size: 2.8rem;
+	line-height: 3.4rem;
+	color: $anaplan-grey-blue;
+}
+h2 {
+	font-size: 3.6rem;
+	line-height: 4.2rem;
+	font-weight: $bold;
+	text-align: center;
+	text-transform: capitalize;
+}
+h3 {
+	font-size: $h3-size;
+	line-height: $h3-leading;
+	color: $anaplan-grey-blue;
+}
+h4,
+h5,
+h6,
+p {
+	font-size: $paragraph-size;
+	line-height: $paragraph-leading;
+	color: $anaplan-grey-blue;
+}
+h6 {
+	font-weight: $bold;
+}
+a {
+	color: #e40081;
+	text-decoration: none;
+	@include transition( color 0.3s ease-in );
+}
+.standard-section {
+	margin: 0 auto;
+	padding: 8rem 0;
+	position: relative;
+}
+.restricted-width {
+	margin: 0 auto;
+	max-width: 85rem;
+	padding: 0;
+}
+.site-wrapper {
+	position: relative;
+	overflow-x: hidden;
+}
+.formHeader {
+	color: $home-type-blue;
+}

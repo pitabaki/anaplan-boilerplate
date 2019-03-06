@@ -46,6 +46,32 @@ jQuery(document).ready(function($){
 
     }
 
+    var menuSelection = $(".jet-menu-inner").find("li");
+
+    var absoluteLinkSwap = function( arr, num, urlPrefix ) {
+        if ( num < arr.length ) {
+            
+            if ( arr.eq(num).attr("href").indexOf(".com") === -1) {
+                var currentURL = arr.eq(num).attr("href");
+                arr.eq(num).attr("href", urlPrefix + currentURL);
+            }
+
+            num++;
+            absoluteLinkSwap(arr, num, urlPrefix);
+        }
+    };
+
+    var absoluteLinkSwapInit = function( arr, num ) {
+        if ( num < arr.length) {
+            var currentAnchorSelection = arr.eq(num).find("a");
+            
+            absoluteLinkSwap(currentAnchorSelection, 0, "https://www.anaplan.com");
+            num++;
+            absoluteLinkSwapInit(arr, num);
+        }
+    };
+    absoluteLinkSwapInit(menuSelection, 0);
+
     /*if ( $('#nav-about-menu').find(".elementor-column").length < 2 ) {
         $('#nav-about-menu').parents(".jet-sub-mega-menu").addClass("jet-sub-mega-menu-50");
     }*/

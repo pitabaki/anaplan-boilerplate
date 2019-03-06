@@ -1,0 +1,182 @@
+.speakers {
+	background-color: #ffffff;
+	padding-top: 6rem;
+	h3 {
+		margin: 1.5rem auto;
+		width: 80%;
+		font-size: 3rem;
+		line-height: 3.6rem;
+		font-weight: $bold;
+		text-align: center;
+		color: $anaplan-deep-blue;
+	}
+	p,
+	a {
+		font-size: 1.6rem;
+		line-height: 2.1rem;
+		color: $anaplan-grey-type;
+	}
+	p {
+		&.center {
+			text-align: center;
+		}
+		a {
+			margin-top: 4rem;
+			display: block;
+			font-weight: $bold;
+			text-align: center;
+			@include transition(color 0.25s ease-in);
+		}
+	}
+	strong {
+		color: $anaplan-grey-type;
+	}
+	a {
+		color: $anaplan-teal;
+		@include transition(color 0.25s ease-in);
+	}
+	.outer-cont {
+		overflow: hidden;
+		position: relative;
+		height: 32.5rem;
+		float: left;
+		width: 50%;
+		&.left {
+			margin-top: 3rem;
+		}
+		.featured-speaker {
+			position: absolute;
+			top: 0;
+			width: 46rem;
+			height: 50rem;
+			float: left;
+			background: url('/wp-content/uploads/sites/17/2018/02/featured_speakers_alfonso_malcolm.png') no-repeat;
+			z-index: 2;
+		}
+		.inner-cont {
+			position: absolute;
+			bottom: 0;
+			height: 34rem;
+			width: 100%;
+			overflow: hidden;
+			background-color: $anaplan-light-grey;
+			.overlay-color {
+				position: absolute;
+				background-color: $anaplan-light-grey;
+				width: 100rem;
+				height: 120rem;
+				left: 18rem;
+				z-index: 3;
+				@include rotation(25deg);
+			}
+			.background-color {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				left: 20rem;
+				z-index: 1;
+			}
+			.content {
+				position: relative;
+				height: 100%;
+				padding: 6rem 6rem 6rem 0;
+				float: right;
+				background-color: $anaplan-light-grey;
+				z-index: 4;
+				h3 {
+					margin: 1.5rem auto;
+					width: 100%;
+					font-size: 3rem;
+					line-height: 3.6rem;
+					font-weight: $bold;
+					text-align: left;
+					color: $anaplan-deep-blue;
+				}
+				h4,
+				p {
+					margin: 0 auto;
+					width: 100%;
+					font-size: 1.6rem;
+					line-height: 2.1rem;
+					color: $anaplan-grey-type;
+				}
+				p {
+					font-size: 1.4rem;
+					line-height: 1.9rem;
+				}
+				h4 {
+					margin-bottom: 2rem;
+					font-weight: $bold;
+				}
+			}
+		}
+	}
+}
+.speaker-section {
+	padding: 0 0 8rem 0;
+	.container {
+		max-width: 96rem;
+		.row {
+			margin: 0 auto;
+			text-align: center;
+			.col-md-4 {
+				margin: 0 auto;
+				text-align: center;
+				.speaker-tile {
+					img {
+						width: 100%;
+					}
+					.speaker-name,
+					.speaker-desc {
+						display: block;
+						text-align: center;
+					}
+					a {
+						cursor: default;
+						color: $anaplan-deep-blue;
+						@include transition(color 0.25s ease-in);
+					}
+					.speaker-name {
+						margin-top: 2rem;
+						font-size: 2.4rem;
+						line-height: 3rem;
+						font-weight: 500;
+						color: $anaplan-deep-blue;
+						cursor: default;
+						text-decoration: none !important;
+					}
+					.speaker-desc {
+						margin: 0.6rem auto 3rem;
+						font-size: 1.6rem;
+						line-height: 2.1rem;
+						color: $anaplan-grey-type;
+					}
+				}
+			}
+		}
+	}
+}
+.speaker-col {
+	min-height: 45rem;
+}
+#malcolm {
+	.featured-speaker {
+		background-position-x: -46rem;
+	}
+}
+#frank {
+	.featured-speaker {
+		background-position-x: -4rem;
+		left: -4rem;
+	}	
+}
+#malcolm-content {
+	.background-color {
+		background-color: $anaplan-pewter;
+	}
+}
+#frank-content {
+	.background-color {
+		background-color: $anaplan-teal;
+	}
+}

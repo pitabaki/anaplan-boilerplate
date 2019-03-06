@@ -1,0 +1,44 @@
+/*
+Theme Name: Anaplan Astra Child
+Theme URI: https://www.anaplan.com/hub-staging/
+Author: Peter Berki
+Template: anaplan
+Description: Child theme for Anaplan Hub 17 website.
+Version: 1.0.0
+Text Domain: anaplan
+*/
+
+/*
+DON'T USE THIS CSS
+FOR TEST PURPOSES ONLY
+*/
+
+.btn,body{font-size:18px}body *{font-family:museo-sans,Helvetica,Arial,sans-serif;color:#5d5d5d;-webkit-font-smoothing:antialiased}body{font-weight:300;line-height:24px}hr{border:solid #ddd;border-width:1px 0 0;clear:both;margin:10px 0 30px;height:0}img{user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}::selection{background:#36b2e7;color:#fff}::-moz-selection{background:#36b2e7;color:#fff}.text-blue{color:#3179b1}.scrolled{-webkit-box-shadow:0 5px 5px 0 rgba(0,0,0,.3);-moz-box-shadow:0 5px 5px 0 rgba(0,0,0,.3);box-shadow:0 5px 5px 0 rgba(0,0,0,.3)}div:focus{outline:0}iframe[name=google_conversion_frame]{position:absolute;bottom:9999px}.container,.container-fluid{padding-left:10px;padding-right:10px}@media (min-width:992px){.container{width:960px}}@media (min-width:1200px){.container{width:960px}}@media (max-width:767px){.container{padding-left:20px!important;padding-right:20px!important}}.row{margin-left:-10px;margin-right:-10px}.hentry,.widget{margin:0 0 1.5em}.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{padding-left:10px;padding-right:10px}a{-webkit-transition:color .2s ease-in;-moz-transition:color .2s ease-in;-ms-transition:color .2s ease-in;-o-transition:color .2s ease-in;transition:color .2s ease-in}a,a:visited{color:#36b2e7}#img-solutions{color:#fff}a:active,a:focus,a:hover{color:#3179b1;text-decoration:none}.btn{border-radius:0;border-width:1px;border-style:solid}.btn-blue,.btn-primary,a.btn-blue,a.btn-primary{border-color:#36b4e7;background-color:#36b4e7;color:#fff}.btn-blue:hover,.btn-primary:hover{border-color:#30a2cf;background-color:#30a2cf}.btn-blue.btn-outline,.btn-default{border-color:#36b4e7;background-color:transparent;color:#36b4e7}.btn-blue.btn-outline:hover,.btn-default:hover{background-color:#36b4e7;color:#fff}.btn-white{border-color:#fff;background-color:#fff;color:#36b4e7}.btn-white:hover{opacity:.8}.btn-white.btn-outline{border-color:#fff;background-color:transparent;color:#fff}.btn-white-view:hover{border-color:#fff;background-color:#fff;color:#36b2e7}.btn-gray,.btn-gray:active,.btn-gray:focus,a.btn-gray,a.btn-gray:active,a.btn-gray:focus{border:1px solid #b1bcc1;color:#637983}.btn-gray:hover{background-color:#36b4e7;color:#fff;border-color:#36b4e7}.modal-lightbox .modal-dialog.modal-full{width:80%}.modal-lightbox .modal-content{background:0 0;border:none;-webkit-box-shadow:none;box-shadow:none;text-align:center}.modal-lightbox .modal-content iframe{border:1px solid #000;-webkit-box-shadow:5px 0 15px rgba(0,0,0,.5);box-shadow:5px 0 15px rgba(0,0,0,.5)}a[data-toggle=collapse]{color:#5d5d5d}.fa{color:inherit}.screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute!important;height:1px;width:1px;overflow:hidden}.screen-reader-text:focus{background-color:#f1f1f1;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,.6);clip:auto!important;color:#21759b;display:block;font-size:14px;font-size:.875rem;font-weight:700;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}.sticky{display:block}.byline,.updated:not(.published){display:none}.group-blog .byline,.single .byline{display:inline}.entry-content,.entry-summary,.page-content{margin:1.5em 0 0}.page-links{clear:both;margin:0 0 1.5em}.more-blue{display:inline-block;background:url(images/sprites.png) -140px 0 no-repeat}.archive .format-aside .entry-title,.blog .format-aside .entry-title{display:none}.comment-content a{word-wrap:break-word}.bypostauthor{display:block}.responsive embed,.responsive iframe,.responsive img,.responsive object{max-width:100%;height:auto}.infinite-scroll .posts-navigation,.infinite-scroll.neverending .site-copyright,.infinite-scroll.neverending .site-footer{display:none}.infinite-scroll.neverending .site-copyright,.infinity-end.neverending .site-footer{display:block}.comment-content .wp-smiley,.entry-content .wp-smiley,.page-content .wp-smiley{border:none;margin-bottom:0;margin-top:0;padding:0}embed,iframe,object{max-width:100%}.socialmedia a{display:inline-block;background:url(images/sprites.png) no-repeat;padding:5px 0 0 38px;height:29px}.socialmedia.socialmedia-linkedin a{background-position:-471px 0}.socialmedia.socialmedia-linkedin a:hover{background-position:-471px -60px}.socialmedia.socialmedia-twitter a{background-position:-471px -120px}.socialmedia.socialmedia-twitter a:hover{background-position:-471px -180px}.socialmedia.socialmedia-facebook a{background-position:-471px -240px}.socialmedia.socialmedia-facebook a:hover{background-position:-471px -300px}.socialmedia.socialmedia-google a{background-position:-471px -360px}.socialmedia.socialmedia-google a:hover{background-position:-471px -420px}.greyscale{filter:url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");filter:gray;-webkit-filter:grayscale(100%);-webkit-transition:all .4s ease-in;-moz-transition:all .4s ease-in;-ms-transition:all .4s ease-in;-o-transition:all .4s ease-in;transition:all .4s ease-in}.greyscale:hover{filter:none;-webkit-filter:grayscale(0)}.customer-content{display:none;padding:5px}
+body * {
+    -webkit-font-smoothing: antialiased;
+}
+
+/******************************
+ * Bootstrap Overrides
+ ******************************/
+
+/* Buttons */
+
+.btn {
+  margin: 0 auto;
+  font-size: 14px;
+  padding: 5px 12px;
+}
+
+.btn-primary, a.btn-primary:focus {
+  background-color:#36b4e7;
+  border-color:#36b4e7;
+  color:#fff;
+}
+
+.adding-to-test {
+  margin: 0 auto;
+}
+.adding-to-test--part-two {
+  margin: 0 auto;
+}

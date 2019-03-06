@@ -1,0 +1,316 @@
+.hero {
+	max-height: inherit;
+}
+.site-wrapper {
+	.movement-hero {
+		margin: 0 auto!important;
+		margin-top: 9rem!important;
+		padding: 0;
+		position: relative;
+		background-color: $anaplan-light-grey;
+		overflow: hidden;
+		max-height: 33rem;
+		width: 100%;
+		will-change: max-height;
+		@include transition(max-height 0.25s ease-in);
+		&#training {
+			background-color: $anaplan-teal;
+			h1 {
+				color: #ffffff;
+			}
+			.overlay {
+				background-color: $anaplan-teal;
+			}
+		}
+		.overlay {
+			position: absolute;
+			top: -30rem;
+			left: 20rem;
+			width: 120rem;
+			height: 120rem;
+			background-color: $anaplan-light-grey;
+			z-index: 2;
+			will-change: left;
+			@include transition(left 0.5s ease-in);
+			@include rotation(18deg);
+			&.active {
+				left: -60rem;
+			}
+		}
+		.background {
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: -10rem;
+			float: right;
+			will-change: left;
+			@include transition(left 0.5s ease-in);
+			&.active {
+				left: 15rem;
+			}
+			img {
+				float: right;
+				z-index: 0;
+				width: 70%;
+			}
+		}
+		.container {
+			min-height: 50rem;
+			h3.movement-title {
+				margin-top: 1rem;
+				font-size: 2.1rem;
+				line-height: 3rem;
+				color: #ffffff;
+				font-weight: 400;
+			}
+			.movement-title {
+				position: relative;
+				top: 6rem;
+				left: 20rem;
+				width: 70%;
+				font-size: 5.4rem;
+				line-height: 6.6rem;
+				color: $anaplan-deep-blue;
+				font-weight: $bold;
+				z-index: 3;
+				will-change: left;
+				@include transition(left 0.5s ease-in);
+				&.active {
+					left: 3rem;
+				}
+			}
+		}
+	}
+	.hero {
+		display: flex;
+		margin: 0 auto;
+		margin-top: 9rem;
+		padding: 0;
+		justify-content: center;
+		align-items: center;
+		min-height: 40rem;
+		background-color: #ffffff;
+		background-size: cover;
+		background-repeat: no-repeat;
+		&#lost {
+			background-position: center;
+			background-image: url("/status/wp-content/uploads/sites/19/2018/11/404-lost-silhouette-person-v2.jpg");
+		}
+		&#dashboard {
+			background-image: url("/status/wp-content/uploads/sites/19/2018/08/status_page_home_hero_v02.jpg");
+		}
+		&#event-history {
+			background-image: url("/status/wp-content/uploads/sites/19/2018/08/status_page_calendar_hero_v02.jpg");
+		}
+		&.promo {
+			.hero-content {
+				margin: 0 auto;
+				text-align: center;
+				max-width: 76rem;
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				a,
+				p,
+				ul,
+				li {
+					margin: 0 auto;
+					text-align: center;
+				}
+				h1 {
+					margin: 3rem auto;
+				}
+				h2 {
+					margin: 2rem auto 1rem;
+				}
+			}
+		}
+		&.agenda {
+			min-height: inherit;
+			.hero-content {
+				padding: 14rem 0 8rem;
+			}
+		}
+		.hero-content {
+			p {
+				margin-top: 3rem !important;
+				color: #ffffff;
+				text-align: left;
+			}
+		}
+		&#sponsor {
+			min-height: auto;
+			.hero-content {
+				padding: 14rem 0 6rem;
+			}
+		}
+		.agenda-background {
+			position: absolute;
+			width: 100%;
+			height: 70rem;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 0;
+			img {
+				top: -40rem;
+				left: 50%;
+				max-width: 120rem;
+				&.active {
+					top: -40rem;
+				}
+			}
+		}
+		&#sponsor {
+			background-color: $anaplan-light-grey;
+			.hero-content {
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				p,
+				a {
+					text-shadow: none;
+				}
+				h1 {
+					font-weight: bold;
+				}
+				p {
+					text-align: left;
+				}
+			}
+		}
+		.hero-content {
+			position: relative;
+			padding: 0;
+			text-align: left;
+			z-index: 1;
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			p,
+			ul,
+			li {
+				opacity: 0;
+				@include transition(all 0.5s ease-in);
+				&.active {
+					opacity: 1;
+				}
+			}
+			h1 {
+				position: relative;
+				margin-top: 10px;
+				font-size: 4.8rem;
+				line-height: 5.4rem;
+				font-weight: $bold;
+				text-align: center;
+				opacity: 0;
+				color: #ffffff;
+				text-shadow: none;
+				z-index: 99;
+				@include transition(all 0.5s ease-in);
+				&.active {
+					opacity: 1;
+				}
+			}
+			h3 {
+				position: relative;
+				margin-top: 3rem;
+				font-size: 2rem;
+				line-height: 2.6rem;
+				font-weight: $regular;
+				text-align: center;
+				opacity: 0;
+				color: #ffffff;
+				text-shadow: none;
+				z-index: 99;
+				@include transition(all 0.5s ease-in);
+				&.active {
+					opacity: 1;
+				}
+			}
+		}
+		p {
+			text-align: center;
+		}
+		img {
+			position: relative;
+			max-width: 32rem;
+			top: 50rem;
+			opacity: 0;
+			@include transition(all 0.5s ease-in);
+		}
+		.foreground {
+			position: relative;
+			top: 10rem;
+			z-index: 1;
+		}
+		.background {
+			position: absolute;
+			top: 0!important;
+			left: -5.5rem;
+			width: 70rem;
+			z-index: 0;
+			max-width: inherit;
+		}
+	}
+	.play-button {
+		width: 60px !important;
+		height: 60px !important;
+	}
+	#bg-content {
+		margin: 0 auto;
+		padding: 0;
+		position: relative;
+		background-size: cover;
+		top: 0;
+		@include transform(translateY(0));
+		h1 {
+			margin: 10px auto !important;
+		}
+		h1,
+		p {
+			color: $home-type-white !important;
+			font-weight: $semi-bold;
+		}
+	}
+	.banner-solid {
+		background-color: $home-type-white !important;
+	}
+	.text-center {
+		margin: 0 auto;
+		float: inherit;
+		h3 {
+			font-size: 24px;
+			line-height: 30px;
+		}
+		p {
+			font-size: $paragraph-size;
+			line-height: $paragraph-leading;
+			text-align: left!important;
+		}
+	}
+	.closing-speaker-caption {
+		position: relative;
+		top: 24rem;
+		left: 60%;
+		z-index: 9999;
+		text-align: left;
+		h3,
+		h4 {
+			color: #ffffff;
+		}
+		h3 {
+			color: $home-tile-color-05;
+			font-weight: 500;
+		}
+	}
+}

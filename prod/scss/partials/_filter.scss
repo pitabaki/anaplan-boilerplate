@@ -1,0 +1,29 @@
+.introductory {
+	&.filtering {
+		padding-top: 0;
+		text-align: center;
+		li {
+			display: inline-block;
+			margin: 0.4rem;
+			.filter-button {
+				&.btn-teal {
+					background: transparent;
+					color: $anaplan-teal;
+					border: 1px solid $anaplan-teal;
+				}
+			}
+		}
+		.content {
+			span {
+				p {
+					margin: 0 auto;
+					padding-top: 1.6rem;
+					font-size: $paragraph-size;
+					line-height: $paragraph-leading;
+					height: 7rem;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.veil {
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	background-color: $anaplan-deep-blue;
+	z-index: 999;
+	@include transition( opacity 0.5s ease-in );
+}

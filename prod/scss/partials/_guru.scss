@@ -1,0 +1,171 @@
+.guru-zone,
+.introductory {
+	margin: 0 auto;
+	padding: 12rem 0 0;
+	background-color: #ffffff;
+	text-align: center;
+	.form-col {
+		padding-left: 3rem;
+		.StandardForm {
+			p {
+				margin-left: 0;
+				margin-bottom: 3rem;
+				text-align: left;
+				width: 55%;
+				strong {
+					display: block;
+					margin-bottom: 1rem;
+				}
+			}
+			.mktoForm {
+				&.mktoHasWidth {
+					&.mktoLayoutLeft {
+						margin-left: 0 !important;
+					}
+				}
+			}
+		}
+	}
+	&.choose {
+		background-color: $tile-white;
+	}
+	.col-md-6 {
+		.content {
+			margin-bottom: 1.4rem;
+		}
+	}
+	.content {
+		margin: 0 auto;
+		margin-bottom: 6rem;
+		text-align: left;
+		&.content-cta {
+			text-align: center;
+		}
+		p,
+		a {
+			font-size: $paragraph-size;
+			line-height: $paragraph-leading;
+			color: $anaplan-grey-type;
+		}
+		a {
+			color: $anaplan-teal;
+			@include transition(color 0.25s ease-in);
+		}
+	}
+	.center {
+		margin: 0 auto;
+		float: inherit;
+	}
+	&#training-zone,
+	&#hackathon {
+		h3,
+		h4 {
+			text-align: left;
+			color: $anaplan-teal;
+		}
+		h4 {
+			margin-top: 6rem;
+			margin-bottom: 1rem;
+			font-size: 2.4rem;
+			line-height: 3rem;
+			font-weight: $bold
+		}
+		p {
+			text-align: left;
+			margin-bottom: 1rem;
+		}
+		.form-col {
+			.StandardForm {
+				p {
+					margin-bottom: 3rem;
+				}
+			}
+		}
+		.guru-cards {
+			margin: 6rem auto 0;
+			padding-top: 0;
+			border: none;
+			width: 100%;
+			min-height: 30rem;
+			h4 {
+				margin-top: 1rem;
+				margin-left: 0;
+				margin-bottom: 0.5rem;
+				font-size: 2.1rem;
+				line-height: 2.6rem;
+				min-height: 0;
+				font-weight: 400;
+				width: 74%;
+				color: $anaplan-pewter;
+			}
+			p {
+				margin-bottom: 1.5rem;
+				width: 74%;
+				&.indicator {
+					display: inline-block;
+					margin-bottom: 0.5rem;
+					width: 4rem;
+					border-top: 0.4rem solid $anaplan-pewter;
+				}
+			}
+		}
+	}
+	&#hackathon {
+		h4 {
+			margin: 0 auto;
+			font-size: 2.1rem;
+			line-height: 2.6rem;
+			color: $anaplan-deep-blue;
+		}
+		.guru-cards {
+			h4 {
+				font-weight: $bold;
+				color: $anaplan-deep-blue;
+			}
+			p {
+				&.indicator {
+					border-top: 0.4rem solid $anaplan-deep-blue;
+				}
+			}
+		}
+	}
+	h3 {
+		margin: 0 auto;
+		margin-bottom: 2rem;
+		font-size: 3rem;
+		line-height: 3.6rem;
+		font-weight: $bold;
+		color: $anaplan-deep-blue;
+	}
+	p {
+		margin: 0 auto;
+		margin-bottom: 6rem;
+		font-size: $paragraph-size;
+		line-height: $paragraph-leading;
+		color: $anaplan-grey-type;
+	}
+	.guru-cards {
+		margin: 6rem auto;
+		width: 90%;
+		border-top: 0.6rem solid $anaplan-pewter;
+		padding: 1.4rem 0;
+		float: left;
+		text-align: left;
+		min-height: 36rem;
+		h4 {
+			margin: 0 auto;
+			margin-bottom: 3rem;
+			min-height: 6rem;
+			font-size: 2.4rem;
+			line-height: 3rem;
+			font-weight: $bold;
+			color: $anaplan-pewter;
+		}
+		p {
+			margin: 0;
+			font-size: $paragraph-size;
+			line-height: $paragraph-leading;
+			color: $anaplan-grey-type;
+		}
+	}
+}

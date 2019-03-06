@@ -1,0 +1,33 @@
+.last-year {
+	.col-md-4,
+	.col-md-8 {
+		&.img-illum {
+			opacity: 0;
+			@include transition( opacity 0.25s ease-in);
+		}
+		background-size: cover;
+		background-repeat: no-repeat;
+		.col-md-12 {
+			background-size: cover;
+			background-repeat: no-repeat;
+			&.img-illum {
+				opacity: 0;
+				@include transition( opacity 0.25s ease-in);
+			}
+		}
+	}
+}
+#attach-img {
+	min-height: 40rem;
+}
+.colorbox {
+	img {
+		width: 100%;
+	}
+}
+.coloringbox {
+	img {
+		width: 100%;
+		@include transition(opacity 0.25s ease-in);
+	}
+}

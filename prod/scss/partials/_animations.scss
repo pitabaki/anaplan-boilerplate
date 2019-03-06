@@ -1,0 +1,45 @@
+.rotate-img-clockwise {
+	position: absolute;
+	@include animation(spin-clockwise 80s linear infinite);
+}
+@-moz-keyframes spin-clockwise { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin-clockwise { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin-clockwise { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.rotate-img-counter {
+	position: absolute;
+	@include animation(spin-counter 80s linear infinite);
+}
+@-moz-keyframes spin-counter { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spin-counter { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spin-counter { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+.rotate-img-clockwise-once {
+	position: absolute;
+	top: 20rem;
+	transform: rotate(0deg);
+	@include transition(all 2s ease-out);
+}
+.animation-margin {
+	//margin-top: 20rem !important;
+	opacity: 0 !important;
+	@include transition(opacity 0.5s ease-in);
+}
+.position-base {
+	position: absolute;
+}
+.animate-enlarge {
+	opacity: 1;
+	will-change: opacity;
+	@include transition(opacity 0.5s ease-in);
+	&.active {
+		opacity: 0;
+	}
+}
+.animation-opacity {
+	opacity: 0;
+	@include transition(opacity $time ease-in);
+	&.active {
+		opacity: 1;
+	}
+}

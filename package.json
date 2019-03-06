@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "gulp-clean-css": "^4.0.0",
     "gulp-minify": "^3.1.0",
-    "gulp-watch": "^5.0.1"
+    "gulp-sass": "^4.0.2",
+    "node-watch": "^0.6.0"
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

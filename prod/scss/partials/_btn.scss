@@ -1,0 +1,44 @@
+.btn {
+	padding: 2rem 4rem;
+	@include border-radius(0.6rem);
+	&.btn-orange {
+		background-color: $anaplan-orange;
+		border: none;
+		@include transition(all 0.25s ease-in);
+	}
+	&.btn-teal {
+		background-color: $anaplan-teal;
+		border: none;
+		@include transition(all 0.25s ease-in);
+	}
+	&.btn-register {
+		margin: 0 auto;
+		padding: 0 2rem!important;
+		position: relative;
+		color: #ffffff !important;
+		font-weight: $bold;
+		height: 4rem !important;
+		font-size: 1.6rem !important;
+		line-height: 4rem !important;
+	}
+	&.btn-text {
+		padding: 0;
+		min-width: 0;
+		color: $anaplan-orange;
+		font-weight: 400;
+		@include transition(color 0.3s ease-in);
+	}
+	&.btn-pink {
+		font-size: $paragraph-size;
+		line-height: $paragraph-leading;
+		color: #ffffff;
+		background-color: $anaplan-fuchsia;
+		@include transition(all 0.25s ease-in);
+	}
+}
+
+.content {
+	&.content-cta {
+		text-align: center; //Button for sessions, for example
+	}
+}
