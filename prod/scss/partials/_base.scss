@@ -2,7 +2,7 @@
  * General sizes and color attributes
  */
  
-* {
+ * {
 	font-family: $base-sans-serif;
 	text-decoration: none;
 	text-transform: initial;
@@ -27,9 +27,10 @@ li,
 span,
 div {
 	font-family: $base-sans-serif;
-	color: $anaplan-grey-blue;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	color: $body-main;
+	font-weight: $regular;
 }
 button {
 	padding: $button-padding;
@@ -40,52 +41,56 @@ section {
 	overflow: hidden;
 }
 h1 {
-	font-size: 2.8rem;
-	line-height: 3.4rem;
-	color: $anaplan-grey-blue;
+	font-size: $h1-size;
+	line-height: $h1-leading;
+	font-weight: $bold;
 }
 h2 {
-	font-size: 3.6rem;
-	line-height: 4.2rem;
-	font-weight: $bold;
-	text-align: center;
-	text-transform: capitalize;
+	font-size: $h2-size;
+	line-height: $h2-leading;
+	font-weight: $semi-bold;
 }
 h3 {
 	font-size: $h3-size;
 	line-height: $h3-leading;
-	color: $anaplan-grey-blue;
 }
-h4,
-h5,
-h6,
-p {
-	font-size: $paragraph-size;
-	line-height: $paragraph-leading;
-	color: $anaplan-grey-blue;
+h4 {
+	font-size: $h3-size;
+	line-height: $h3-leading;
+}
+h5 {
+	font-size: $h3-size;
+	line-height: $h3-leading;
 }
 h6 {
+	font-size: $h3-size;
+	line-height: $h3-leading;
 	font-weight: $bold;
 }
 a {
-	color: #e40081;
+	color: $anaplan-fuchsia;
 	text-decoration: none;
 	@include transition( color 0.3s ease-in );
 }
 .standard-section {
 	margin: 0 auto;
-	padding: 8rem 0;
-	position: relative;
+	padding: 60px 0;
 }
-.restricted-width {
+.container-fixed {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
 	margin: 0 auto;
-	max-width: 85rem;
 	padding: 0;
+	width: 100%;
+	max-width: 1140px;
 }
-.site-wrapper {
-	position: relative;
-	overflow-x: hidden;
+.header--white {
+	color: #ffffff;
 }
-.formHeader {
-	color: $home-type-blue;
+.header--green {
+	color: $anaplan-green;
+}
+.header--dark-blue {
+	color: $anaplan-navy-main;
 }

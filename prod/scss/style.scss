@@ -1,0 +1,24 @@
+/*!
+Theme Name: Anaplan 
+Theme URI: anaplan.com
+Author: Peter Berki
+Author URI: https://kumadev.com
+Template: anaplan
+Description: Child theme for Anaplan website.
+Version: 1.0.0
+Text Domain: anaplan
+*/
+
+@charset 'utf-8';
+
+//@import 'vendors/_anaplan_hub16';
+@import 'modules/all';
+@import 'partials/all';
+
+/*
+
+INSERT ANY ADDITIONAL STYLES HERE
+
+*/
+
+@import 'partials/media';

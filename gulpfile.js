@@ -10,8 +10,8 @@ SOURCES
 */
 
 //Styles
-var scss = "prod/scss/style_test.scss",
-    css = "prod/style_test.css";
+var scss = "prod/scss/style.scss",
+    css = "prod/style.css";
 
 //Scripts
 var scripts = "./prod/js/*.js";
