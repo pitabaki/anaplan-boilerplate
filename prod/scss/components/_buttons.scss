@@ -9,5 +9,18 @@
 		background-color: $anaplan-fuchsia;
 		transform: scale(1);
 		@include transition(all 0.25s ease-in);
+		@include on-event {
+			transform: scale(1.1);
+			background-color: $anaplan-fuchsia-hover;
+		}
 	}
+	&.btn-text {
+		@include on-event {
+			color: $anaplan-fuchsia-hover;
+		}
+	}
+}
+
+.ast-button-wrap button.menu-toggle {
+	height: auto;
 }

@@ -1,7 +1,8 @@
 var gulp = require("gulp"),
     minify = require("gulp-minify"),
     cssMinify = require("gulp-clean-css"),
-    sass = require("gulp-sass");
+    sass = require("gulp-sass"),
+    watch = require("gulp-watch");
 
 /*
 
@@ -10,11 +11,12 @@ SOURCES
 */
 
 //Styles
-var scss = "prod/scss/style.scss",
+var scss = "prod/scss/main.scss",
     css = "prod/style.css";
 
 //Scripts
 var scripts = "./prod/js/*.js";
+var themeScriptProd = "prod/scripts.js";
 
 /*
 
@@ -28,12 +30,24 @@ var scssDest = "dist/css",
 
 //Scripts
 var scriptsDest = "./dist/js";
+var themeScriptDist = "dist";
 
 /*
 
 TASKS
 
 */
+
+gulp.task("themeScripts", function(){
+    return gulp.src(themeScriptProd)
+        .pipe(minify({
+            ext: {
+                src: ".js",
+                min: "-min.js"
+            }
+        }))
+        .pipe(gulp.dest(themeScriptDist));
+});
 
 gulp.task("scripts", function(){
     return gulp.src(scripts)
@@ -51,7 +65,7 @@ gulp.task('sass', function(){
 	return gulp.src(scss)
 		.pipe(sass().on('error', sass.logError))
 		.pipe(cssMinify({compatibility: 'ie8'}))
-		.pipe(gulp.dest(scssDest));
+		.pipe(gulp.dest(cssDest));
 });
 
-gulp.task("god",["scripts", "styles", "sass"]);
+gulp.task("god",["themeScripts", "scripts", "sass"]);

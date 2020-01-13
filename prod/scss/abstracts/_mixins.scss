@@ -16,6 +16,23 @@
 	-moz-border-radius: $var !important;
 	border-radius: $var !important;
 }
+@mixin breakpoint($point) {
+	@if $point == desktop {
+		@media (min-width: 1024px) { @content; }
+	}
+	@else if $point == laptop {
+		@media (min-width: 992px) { @content; }
+	}
+	@else if $point == tablet {
+		@media (min-width: 768px) { @content; }
+	}
+	@else if $point == phablet {
+		@media (min-width: 576px) { @content; }
+	}
+	@else if $point == mobile {
+		@media (max-width: 575px) { @content; }
+	}
+}
 @mixin gradients($direction, $first_color, $second_color) {
 	@if $direction == 'right' {
 		background: $first_color; /* For browsers that do not support gradients */
@@ -95,4 +112,21 @@
 	-o-transition: $var;
 	-ms-transition: $var;
 	transition: $var;
+}
+/// @author Harry Roberts
+@mixin on-event($self: false) {
+	@if $self {
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	} @else {
+		&:hover,
+		&:active,
+		&:focus {
+			@content;
+		}
+	}
 }

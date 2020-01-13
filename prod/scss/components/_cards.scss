@@ -1,0 +1,115 @@
+.rp4wp-related-posts {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1200px;
+    &.rp4wp-related-resources,
+    &.rp4wp-related-customers,
+    &.rp4wp-related-landing_pages {
+        padding: 0;
+        .rp4wp-posts-list {
+            .rp4wp-col {
+                margin: 0 12px;
+                padding: 0 !important; 
+                width: 23% !important;
+                min-height: 360px;
+                box-shadow: 0 0 10px 0 rgba(110, 123, 140, 0.3);
+            }
+        }
+        .rp4wp_component_wrapper {
+            height: auto !important;
+            width: auto !important;
+        }
+        .rp4wp_component_wrapper_right { 
+            padding-left: 0 !important; 
+            height: auto !important;
+        }
+    }
+    &.rp4wp-related-customers,
+    &.rp4wp-related-landing_pages {
+        .rp4wp-posts-list {
+            .rp4wp-col {
+                min-height: 395px;
+            }
+        }
+    }
+    ul {
+        display: flex;
+        margin: 0;
+        margin-top: 10px;
+        padding-left: 0;
+        .rp4wp-col {
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px 0 rgba(110, 123, 140, 0.3);
+            float: left;
+            width: 100%;
+            .rp4wp_component_excerpt {
+                padding: 0 15px 15px 15px !important;
+                font-family: $base-sans-serif;
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: $regular;
+                width: 100%;
+                float: left;
+            }
+            .rp4wp_component { 
+                padding: 0 15px;
+                &:first-child {
+                    padding: 0;
+                }
+                .wp-post-image {
+                    width: 100%;
+                }
+            }
+            .rp4wp_component_title {
+                padding: 10px 15px 0px 15px !important;
+                height: auto !important;
+                a {
+                    margin: 5px 0 0;
+                    font-family: "proxima-nova", Sans-serif;
+                    font-weight: 600;
+                    color: #303133;
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        color: #23527c;
+                    }
+                }
+            }
+            .rp4wp_component_image {
+                height: auto !important;
+            }
+        }
+    }
+}
+
+.rp4wp_component_date {
+    display: none!important;
+}
+
+.rp4wp_component_author,
+.rp4wp_component_date {
+    span {
+        padding-bottom: 5px;
+        font-family: $base-sans-serif;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: $regular;
+        color: #0274be;
+    }
+}
+
+.rp4wp_component_wrapper_left { 
+    padding: 0 15px 0 15px; 
+    float: left;
+}
+.rp4wp_component_wrapper_right {
+    padding: 0 15px 0 10px;
+    span::before {
+        content: '\f111';
+        font-family: FontAwesome;
+        color: inherit;
+        opacity: .4;
+        font-size: .8em;
+        padding-right: 7px;
+    }
+}

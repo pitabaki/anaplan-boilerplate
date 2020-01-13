@@ -1,0 +1,6 @@
+.container-fixed {
+    @include breakpoint(desktop) {
+        width: 100%;
+        max-width: $max-width;
+    }
+}

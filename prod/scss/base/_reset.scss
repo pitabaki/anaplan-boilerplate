@@ -1,17 +1,36 @@
 /*
  * General sizes and color attributes
  */
- 
+
  * {
 	font-family: $base-sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 	text-decoration: none;
 	text-transform: initial;
 }
-html {
-	font-size: 62.5%;
+
+html, body, div, span, h1, h2, h3, h4, h5, p, a, ul, ol, li, img, article, aside, blockquote, figure, figcaption, footer, header, hgroup, menu, nav, section, time {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
 }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, time {
+	display: block;
+}
+a {
+	outline: none;
+}
+
 body {
-	font-size: 1.8rem;
+	font-size: 18px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -23,12 +42,7 @@ h5,
 h6,
 p,
 a,
-li,
-span,
-div {
-	font-family: $base-sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+li {
 	color: $body-main;
 	font-weight: $regular;
 }
@@ -71,6 +85,10 @@ a {
 	color: $anaplan-fuchsia;
 	text-decoration: none;
 	@include transition( color 0.3s ease-in );
+	@include on-event {
+		color: $anaplan-fuchsia-hover;
+		text-decoration: none;
+	}	
 }
 .standard-section {
 	margin: 0 auto;

@@ -1,0 +1,30 @@
+<IfModule mod_headers.c>
+  <FilesMatch ".(js|css|xml|gz|html)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
+# BEGIN iThemes Security - Do not modify or remove this line
+# iThemes Security Config Details: 2
+	# Enable the hide backend feature - Security > Settings > Hide Login Area > Hide Backend
+#	RewriteRule ^(/)?anaplan-console/?$ /wp-login.php [QSA,L]
+# END iThemes Security - Do not modify or remove this line
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+# add a trailing slash to /wp-admin
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
+RewriteRule . index.php [L]
+php_value max_input_vars 10000
+<FilesMatch "\.pdf$">
+ header set x-robots-tag: noindex
+ </FilesMatch>
+ <Files xmlrpc.php>
+order deny,allow
+deny from all
+allow from 123.123.123.123
+</Files>

@@ -1,4 +1,25 @@
 /*
+ * Sizes
+ */
+
+$button-padding: 12px 24px;
+$primary-container: 1140px;
+$max-width: 1140px;
+
+/*
+ * Transition times
+ */
+
+ $time: 0.3s;
+
+/*
+ * Placeholders
+ */
+%container {
+    margin: 0 auto;
+}
+
+/*
  * Colors
  */
 
@@ -6,6 +27,7 @@
 $white: rgb(255, 255, 255); /* #fff */
 $body-main: #6C7782;
 $body-main-dark: #3a3a3a;
+$body-main-light-grey: #7a7a7a;
 $anaplan-navy-main: #0b2265;
 $anaplan-fuchsia: #e40081; /* ONLY USED FOR BUTTONS/LINKS */
 $anaplan-fuchsia-hover: #d20378; /* ONLY USED FOR BUTTONS/LINKS HOVER */

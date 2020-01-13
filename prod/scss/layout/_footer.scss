@@ -11,6 +11,12 @@ footer {
 			font-weight: $bold;
 			color: #ffffff;
 		}
+		li {
+			a {
+				color: #ffffff;
+				text-decoration: none;
+			}
+		}
 		ul {
 			margin: 20px auto;
 			li {
@@ -91,6 +97,21 @@ footer {
 			line-height: $small-leading;
 			font-weight: 300;
 			color: rgba(255,255,255,0.86);
+			@include on-event {
+				text-decoration: none;
+			}
+		}
+		&.site-info--right { 
+			@include breakpoint(laptop) {
+				float: right;
+				text-align: right;			
+			}
+		}
+		&.site-info--left { 
+			@include breakpoint(laptop) {
+				float: left;
+				text-align: left;			
+			}
 		}
 	}
 }

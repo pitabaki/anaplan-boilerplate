@@ -43,3 +43,9 @@
 		opacity: 1;
 	}
 }
+.animation-margin {
+	&.active {
+		margin-top: 0 !important;
+		opacity: 1 !important;
+	}
+}

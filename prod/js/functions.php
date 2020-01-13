@@ -16,7 +16,8 @@ define( 'CHILD_THEME_ANAPLAN_CHILD_VERSION', '1.0.1' );
 /**
  * Enqueue styles
  */
-function child_enqueue() {
+function child_enqueue_support() {
+
     wp_enqueue_script( 'anaplan-child-theme-js', get_stylesheet_directory_uri() . '/scripts-min.js', array('jquery'));
 	wp_enqueue_style( 'anaplan-child-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_ANAPLAN_CHILD_VERSION, 'all' );
 
@@ -50,7 +51,13 @@ function coveo_support() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'child_enqueue' );
+function honey_pot() {
+	wp_enqueue_script( 'anaplan-honeypot', get_stylesheet_directory_uri()  . '/js/min/sweet-honey-min.js',  CHILD_THEME_ANAPLAN_CHILD_VERSION, false);
+}
+
+//add_action( 'wp_enqueue_scripts', 'honey_pot', 15);
+
+add_action( 'wp_enqueue_scripts', 'child_enqueue_support', 15 );
 
 add_action( 'wp_enqueue_scripts', 'coveo_support', 15);
 
@@ -76,24 +83,6 @@ add_filter( 'send_headers', 'anaplan_send_headers' );
 
 /** adding except support to pages - adam **/
 add_post_type_support( 'page', 'excerpt' );
-
-function lazy_load_support($content) {
-    $new_content = str_replace( 'src=', 'style="opacity:0;" data-src=', $content);
-    return str_replace('srcset="', 'data-srcset="', $new_content);
-}
-
-function position_update($content) {
-    if ( strpos( $content, 'itemprop="' ) == TRUE ) {
-        $content = str_replace( ' property="v:title"', '', $content );
-        $content = str_replace( ' itemscope=""', '', $content );
-        $content = str_replace( 'itemprop="', 'property="', $content );
-        $content = str_replace( 'position="', 'property="position" content="', $content );
-    }
-    return $content;
-}
-
-add_filter( 'the_content', 'lazy_load_support' );
-add_filter( 'the_content', 'position_update' );
 
 function custom_excerpt_length( $length ) {
    return 40;
@@ -125,22 +114,3 @@ function single_blog() {
     ) );
 }
 add_action( 'widgets_init', 'single_blog' );
-
-function remove_login_redirect () {
-    $requ = untrailingslashit($_SERVER['REQUEST_URI']);
-    if ( site_url('login','relative') === untrailingslashit( $_SERVER['REQUEST_URI'] ) ){
-      remove_action( 'template_redirect', 'wp_redirect_admin_locations', 1000 );
-    }
-}
-
-add_action( 'template_redirect', 'remove_login_redirect' );
-
-
-
-/*TEST */
-function swap_content( $content ) {
-    $content = str_replace( "http:", "https:", $content );
-    return $content;
-}
-
-add_filter('the_content', 'swap_content');
