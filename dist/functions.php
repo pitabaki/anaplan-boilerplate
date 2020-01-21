@@ -14,10 +14,40 @@
 define( 'CHILD_THEME_ANAPLAN_CHILD_VERSION', '1.0.1' );
 
 /**
+ * jQuery 3.4.x support
+ */
+
+function jquery_migrate_removal( &$scripts ) {
+    if ( !is_admin() ) {
+    $scripts->remove('jquery');
+    $scripts->add('jquery', false, array('jquery-core'), '1.12.4');
+    }
+}
+
+add_filter( 'wp_default_scripts', 'jquery_migrate_removal' );
+
+function jquery_update() {
+    wp_deregister_script('jquery');
+    wp_register_script( 'jquery', 'https://code.jquery.com/jquery-3.4.1.min.js', false, null );
+    wp_enqueue_script( 'jquery');
+    wp_enqueue_script('jquery-migrate', 'https://code.jquery.com/jquery-migrate-3.1.0.js', array('jquery'));
+}
+
+function bootstrap_enqueue() {
+	wp_enqueue_style( 'fontawesome', 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    wp_enqueue_style( 'bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+    wp_enqueue_script( 'popper-js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array('jquery'));
+    wp_enqueue_script( 'bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'));
+}
+
+add_action( 'wp_enqueue_scripts', 'jquery_update', 11);
+add_action( 'wp_enqueue_scripts', 'bootstrap_enqueue', 11);
+
+/**
  * Enqueue styles
  */
-function child_enqueue() {
-    wp_enqueue_script( 'anaplan-child-theme-js', get_stylesheet_directory_uri() . '/scripts-min.js', array('jquery'));
+function child_enqueue_styles() {
+
 	wp_enqueue_style( 'anaplan-child-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_ANAPLAN_CHILD_VERSION, 'all' );
 
 }
@@ -43,14 +73,12 @@ function coveo_support() {
 		wp_enqueue_script( 'anaplan-coveo-js-init', get_stylesheet_directory_uri()  . '/js/coveo-init.js',  CHILD_THEME_ANAPLAN_CHILD_VERSION, false);
 		wp_dequeue_style( 'tribe_customizer_css' );
 	} else {
-		//wp_enqueue_style( 'anaplan-coveo-test', 'https://static.cloud.coveo.com/searchui/v1.2537/css/CoveoFullSearchNewDesign.css', array('astra-theme-css'), CHILD_THEME_ANAPLAN_CHILD_VERSION, 'all' );
-		//wp_enqueue_script( 'anaplan-coveo-js-searchbox', 'https://static.cloud.coveo.com/searchui/v1.2537/js/CoveoJsSearch.Searchbox.min.js',  CHILD_THEME_ANAPLAN_CHILD_VERSION, false);
 		wp_enqueue_script( 'anaplan-coveo-js-init', get_stylesheet_directory_uri()  . '/js/min/coveo-init-standalone-min.js',  CHILD_THEME_ANAPLAN_CHILD_VERSION, false);
 	}
 
 }
 
-add_action( 'wp_enqueue_scripts', 'child_enqueue' );
+add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 
 add_action( 'wp_enqueue_scripts', 'coveo_support', 15);
 
@@ -77,23 +105,28 @@ add_filter( 'send_headers', 'anaplan_send_headers' );
 /** adding except support to pages - adam **/
 add_post_type_support( 'page', 'excerpt' );
 
-function lazy_load_support($content) {
-    $new_content = str_replace( 'src=', 'style="opacity:0;" data-src=', $content);
-    return str_replace('srcset="', 'data-srcset="', $new_content);
-}
-
 function position_update($content) {
     if ( strpos( $content, 'itemprop="' ) == TRUE ) {
         $content = str_replace( ' property="v:title"', '', $content );
         $content = str_replace( ' itemscope=""', '', $content );
         $content = str_replace( 'itemprop="', 'property="', $content );
         $content = str_replace( 'position="', 'property="position" content="', $content );
+        return $content;
+    } else {
+        return $content;
     }
-    return $content;
 }
 
-add_filter( 'the_content', 'lazy_load_support' );
+function position_update_test($content) {
+        $content = str_replace( ' property="v:title"', '', $content );
+        $content = str_replace( ' itemscope=""', '', $content );
+        $content = str_replace( 'itemprop="', 'property="', $content );
+        $content = str_replace( 'position="', 'property="position" content="', $content );
+        return $content;
+}
+
 add_filter( 'the_content', 'position_update' );
+//add_filter( 'the_content', 'position_update_test' );
 
 function custom_excerpt_length( $length ) {
    return 40;
@@ -109,7 +142,7 @@ function marketo_form() {
         'after_widget' => '</aside>',
         'before_title' => '<h2 class="widget-title">',
         'after_title' => '</h2>',
-    ) );
+    ));
 }
 add_action( 'widgets_init', 'marketo_form' );
 
@@ -135,9 +168,6 @@ function remove_login_redirect () {
 
 add_action( 'template_redirect', 'remove_login_redirect' );
 
-
-
-/*TEST */
 function swap_content( $content ) {
     $content = str_replace( "http:", "https:", $content );
     return $content;
