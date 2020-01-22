@@ -1,3 +1,12 @@
+#masthead .fa {
+	font: normal normal normal 18px/1 FontAwesome;
+}
+
+.tg-item-media-holder .tg-item-media-inner img {
+  max-height: 209px !important;
+	min-height: 100% !important;
+}
+
 img,iframe {
 	transition: opacity 0.3s ease-in;
 	-o-transition: opacity 0.3s ease-in;
@@ -5,6 +14,7 @@ img,iframe {
 	-moz-transition: opacity 0.3s ease-in;
 	-webkit-transition: opacity 0.3s ease-in;
 }
+
 .elementor-50355 .elementor-element.elementor-element-0604f22 .eael-pricing-item .body ul li .li-icon i,
 .elementor-50355 .elementor-element.elementor-element-c0751a0 .eael-pricing-item .body ul li .li-icon i,
 .elementor-50355 .elementor-element.elementor-element-625f786 .eael-pricing-item .body ul li .li-icon i{

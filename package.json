@@ -10,10 +10,13 @@
     "node-watch": "^0.6.0"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-watch-sass": "^1.4.1",
     "jest": "^24.9.0"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "gulp sass:watch",
+    "build": "gulp themeScripts",
     "test": "jest"
   },
   "repository": {

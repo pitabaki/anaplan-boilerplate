@@ -1,0 +1,40 @@
+footer {
+    padding: 60px 0;
+    background-color: $anaplan-blue;
+    .social-container {
+        h4 {
+            font-weight: $bold;
+            color: $anaplan-white;
+        }
+    }
+    .footer-nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    ul {
+        li {
+            list-style: none;
+            a {
+                color: $anaplan-white;
+                font-weight: $regular;
+            }
+        }
+        > li {
+            padding: 0 30px 30px 0;
+            > a {
+                font-weight: $bold;
+            }
+            > ul {
+                margin: 0;
+                > li {
+                    padding: 0;
+                    > a {
+                        font-weight: $regular;
+                    }
+                }
+            }
+        }
+    }
+}

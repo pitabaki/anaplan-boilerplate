@@ -13,6 +13,15 @@
  */
 define( 'CHILD_THEME_ANAPLAN_CHILD_VERSION', '1.0.1' );
 
+
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+//add_action( 'after_setup_theme', 'register_navwalker' );
+
 /**
  * jQuery 3.4.x support
  */
