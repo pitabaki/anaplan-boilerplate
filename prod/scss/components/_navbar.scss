@@ -1,3 +1,9 @@
+nav {
+    .navbar-nav {
+        display: none;
+    }
+}
+
 /*
 	I've included a pseudo pug markup file within templates for the navbar. It's not exactly what we use, but it should work with this file.
 */
@@ -270,176 +276,137 @@ li.dropdown_link {
 	}
 }
 
-#site-navigation {
-	height: 56px;
-	.main-navigation {
-		padding-left: 15px;
-		vertical-align: top;
-		#primary-menu {
-			position: relative;
+#masthead {
+	position: fixed !important;
+	height: 75px;
+	background-color: $anaplan-white;
+	nav {
+		&.navbar {
 			display: flex;
-			flex-wrap: wrap;
-			margin: 0;
-			padding-left: 0;
-			list-style: none;
-			> li {
-				position: relative;
+			margin: 0 auto;
+			justify-content: center;
+			align-items: center;
+			height: 75px;
+			background-color: $anaplan-white;
+			.navbar-container {
 				display: flex;
-				height: 100%;
-				> a {
+                align-items: center;
+                height: 75px;
+                width: 100%;
+                max-width: $max-width;
+                .navbar-container-50 {
+                    display: flex;
+                    align-items: center;
+                    width: 50%;
+                    &.navbar-container--left {
+                        justify-content: flex-start;
+                    }
+                    &.navbar-container--right {
+                        justify-content: flex-end;
+                    }
+				}
+				.navbar-collapse {
+					position: fixed;
+					top: 75px;
+					left: 0;
 					display: flex;
-					padding-left: 10px;
-					padding-right: 20px;
-					color: $body-main-light-grey;
-					align-items: center;
-					height: 56px;
+					justify-content: center;
+					align-items: flex-start;
+					overflow-y: scroll;
+					height: 100%;
+					width: 100%;
+					background-color: rgba(0,20,47,0.9);
+					.menu-main-nav-container {
+						width: 100%;
+						max-width: $max-width;
+					}
+					ul {
+						li {
+							padding-top: 60px;
+							list-style: none;
+							width: 33%;
+							> a {
+								margin-bottom: 40px;
+								color: $anaplan-white;
+								font-weight: $font--bold;
+								max-width: 100%;
+								&::after {
+									position: absolute;
+									content: '';
+									margin-top: 40px;
+									width: 30px;
+									border-bottom: 2px solid $anaplan-green;
+								}
+							}
+							ul {
+								margin: 0;
+								li {
+									padding: 0;
+									width: 100%;
+									a {
+										margin: 0;
+										font-weight: $font--book;
+										&::after {
+											border: none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				.navbar-nav {
+					display: flex;
+					flex-wrap: wrap;
+					width: 100%;
 				}
 			}
-			> .menu-item {
-				position: relative;
-				display: block;
-				&.sub-menu-container-50 {
-					&.active > .sub-menu {
-						width: 330px;
-					}
-				}
-				&.active > .sub-menu {
-					position: absolute;
-					display: flex;
-					width: 660px;
-					left: -100%;
-					background-color: rgba(255,255,255,0.94);
-					border: none;
-					border-top: 7px solid $anaplan-navy-main;
-					box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-					.sub-menu {
-						position: relative;
-						border: none;
-						left:0;
-						background: none;
-						width: 100%;
-						box-shadow: none;
-					}
-				}
-				.sub-menu {
-					.sub-menu-title {
-						font-size: 18px;
-						font-weight: bold;
-						color: $body-main-dark;
-						&.sub-menu-title-hidden-left {
-							> a {
-								margin-right: 0;
-							}
-						}
-						&.sub-menu-title-hidden-right {
-							> a {
-								height: 64px;
-								margin-left: 0;
-							}
-						}
-						> a {
-							margin: 0 10px 10px;
-							padding: 30px 10px 12px 10px;
-							font-size: 18px;
-							font-weight: bold;
-							color: $body-main-dark;
-							border-bottom: 1px solid $anaplan-navy-main;
-						}
-					}
-					li {
-						display: inline-block;
-						font-size: 16px;
-						line-height: 21px;
-						max-width: 330px;
-						width: 100%;
-						color: $body-main-light-grey;
-						border: none;
-						a {
-							padding-left: 20px;
-							padding-right: 20px;
-							font-size: 16px;
-							line-height: 21px;
-							color: $body-main-light-grey;
-							border: none;
-							&:after {
-								display:none;
-							}
-						}
-						.sub-menu {
-							li {
-								margin-bottom: 4px;
+			a {
+				display: flex;
+				width: 100%;
+				max-width: 136px;
+			}
+			form {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 50%;
+				label {
+                    margin: 0;
+                    margin-right: 10px;
+					width: 100%;
+					input {
+						&.search-field {
+							padding: 0 10px;
+							height: 30px;
+							width: 100%;
+                            border-radius: 30px;
+                            background-color: #efefef;
+							&::placeholder {
+								font-family: $base-sans-serif;
 								font-size: 16px;
-								line-height: 20px;
-								color: #7a7a7a;
-								border: none;
-								&.sub-menu-link-fuchsia {
-									a {
-										color: $anaplan-fuchsia;
-										@include transition(color 0.3s ease-in);
-										&:hover {
-											color: hover_color($anaplan-fuchsia);
-										}
-										&:after {
-											transform: scale(0) !important;
-										}
-									}
-								}
-								&.sub-menu-title {
-									margin-bottom: 10px;
-									font-size: 18px;
-									font-weight: bold;
-									color: $body-main-dark;
-									border-bottom: 1px solid $body-main-dark;
-								}
-								&.sub-menu-img {
-									a {
-										padding-bottom: 0;
-									}
-								}
-								img {
-									height: auto;
-									width: 100%;
-									border: none;
-									box-shadow: none;
-								}
-								a {
-									padding: 16px 20px;
-									width: 100%;
-									&.sub-menu-button {
-										background-color: $anaplan-fuchsia;
-										&:hover,
-										&:focus,
-										&:active {
-											background-color: $anaplan-fuchsia-hover;
-										}
-									}
-									&:after {
-										position: absolute;
-										display: block;
-										content: "";
-										top: 45px;
-										left: 15px;
-										right: 15px;
-										height: 3px;
-										background-color: $body-main-dark;
-										transform: scale(0);
-										@include transition(transform 0.3s ease-in);
-									}
-									&:hover:after {
-										transform: scale(1);
-									}
-									&.sub-menu-image:hover:after {
-										transform: scale(0);
-									}
-								}
+								font-weight: $font--book;
 							}
-						}
+                        }
+                        @include on-event {
+                            border-color: hover_color($anaplan-green);
+                        }
 					}
 				}
-			}
+				.search-submit {
+					display: none;
+				}
+            }
+            .login-container {
+                a {
+                    font-size: 16px;
+                    font-weight: $font--bold;
+                }
+            }
 		}
 	}
 }
+
 
 #primary-menu {
 	> .menu-item {

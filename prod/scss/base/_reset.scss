@@ -82,11 +82,11 @@ h6 {
 	font-weight: $bold;
 }
 a {
-	color: $anaplan-fuchsia;
+	color: $anaplan-green;
 	text-decoration: none;
 	@include transition( color 0.3s ease-in );
 	@include on-event {
-		color: $anaplan-fuchsia-hover;
+		color: hover_color($anaplan-green);
 		text-decoration: none;
 	}	
 }

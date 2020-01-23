@@ -71,18 +71,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 	<header id="masthead" class="site-header">
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light">
-			<?php the_custom_logo(); ?>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse navbar-right" id="navbarNavDropdown">
-				<?php
-				wp_nav_menu( array(
-					'menu'			 =>	'Main Nav',
-					'menu_id'        => 'primary-menu',
-					'menu_class'     => 'navbar-nav',
-				));
-				?>
+			<div class="navbar-container">
+				<div class="navbar-container-50 navbar-container--left">
+					<?php the_custom_logo(); ?>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse navbar-right" id="navbarNavDropdown">
+						<?php
+						wp_nav_menu( array(
+							'menu'			 =>	'Main Nav',
+							'menu_id'        => 'primary-menu',
+							'menu_class'     => 'navbar-nav',
+						));
+						?>
+					</div>
+				</div>
+				<div class="navbar-container-50 navbar-container--right">
+					<?php get_search_form();?>
+					<div class="login-container"><i></i><a href="">Log-in</a></div>
+				</div>
 			</div>
 		</nav>
 	</header><!-- #masthead -->
