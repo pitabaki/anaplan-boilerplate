@@ -4,7 +4,7 @@
 
 $button-padding: 12px 24px;
 $primary-container: 1140px;
-$max-width: 1140px;
+$max-width: 1200px;
 
 /*
  * Transition times
@@ -43,16 +43,17 @@ $anaplan-green: #00cec1;
 
 /* Primary Colors */
 
-$anaplan-blue: #021d60;
+$anaplan-blue: #21275c;
+$anaplan-blue--footer: #021d60;
+$anaplan-aqua: #00a8df;
+$anaplan-teal: #34bbac;
 $anaplan-dark-grey: #6c7782;
 $anaplan-white: #ffffff;
-$anaplan-light-grey: #d0d8db;
+$anaplan-light-grey: #cfd6d9;
 
 /* Accent Colors */
 
-$anaplan-red: #ac1a1d;
-$anaplan-teal: #1ca392;
-$anaplan-aqua: #0199b1;
-$anaplan-green: #06c673;
-$anaplan-soft-green: #80c8b0;
-$anaplan-soft-aqua: #7cc5cc;
+$anaplan-red: #ab1f24;
+$anaplan-green: #0b984d;
+$anaplan-soft-green: #80c5ad;
+$anaplan-soft-aqua: #7cc3cb;

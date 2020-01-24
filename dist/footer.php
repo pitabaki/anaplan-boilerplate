@@ -61,13 +61,14 @@
 		<div id="copyright" class="site-copyright" role="contentinfo">
 			<div class="container">
 				<div class="row">
-				<div class="col-md-12 site-info">
-					© 2020 Anaplan, Inc. All rights reserved.<span class="sep"> | </span>
-				<a href="https://www.anaplan.com/privacy-policy/">Privacy policy</a> <span class="sep"> | </span>
-					<a href="https://www.anaplan.com/cookie-policy/">Cookie policy</a>
-					<span class="sep"> | </span>
-					<a href="https://www.anaplan.com/terms-of-use/">Terms of service</a>
-				</div>
+					<div class="col-md-6 site-info site-info--left">
+						<p>© 2020 Anaplan, Inc. All rights reserved.</p>
+					</div>
+					<div class="col-md-6 site-info site-info--right">
+						<a href="https://www.anaplan.com/privacy-policy/">Privacy policy</a> <span class="sep"> | </span>
+						<a href="https://www.anaplan.com/cookie-policy/">Cookie policy</a><span class="sep"> | </span>
+						<a href="https://www.anaplan.com/terms-of-use/">Terms of service</a>
+					</div>
 				</div>
 			</div>
 		</div>

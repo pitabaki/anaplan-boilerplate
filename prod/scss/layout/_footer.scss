@@ -1,6 +1,6 @@
 footer {
 	padding: 60px 0;
-    background-color: $anaplan-blue;
+    background-color: $anaplan-blue--footer;
 	&.site-footer {
 		position: relative;
 		padding: 90px 0 60px;
@@ -113,6 +113,7 @@ footer {
 		}
 	}
 	.menu-footer-menu-container {
+		padding: 0 15px;
 		width: 100%;
 		.footer-nav {
 			display: flex;
@@ -130,18 +131,37 @@ footer {
 				}
 			}
 			> li {
-				padding: 0 30px 30px 0;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
 				width: 25%;
-				> a {
-					font-weight: $bold;
+				@include breakpoint(laptop-max) {
+					width: 50%;
 				}
-				> ul {
+				@include breakpoint(tablet-max) {
+					width: 100%;
+				}
+				> a {
+					display: none;
+				}
+				ul {
 					margin: 0;
 					> li {
-						padding: 0;
+						padding: 0 30px 30px 0;
 						width: 100%;
 						> a {
-							font-weight: $regular;
+							display: inline;
+							font-weight: $bold;
+						}
+						> ul {
+							margin: 0;
+							> li {
+								padding: 0;
+								width: 100%;
+								> a {
+									font-weight: $regular;
+								}
+							}
 						}
 					}
 				}
@@ -152,16 +172,18 @@ footer {
 
 .site-copyright {
 	padding: 20px;
-	background-color: $body-main;
+	background-color: $anaplan-blue--footer;
 	.site-info {
-		font-size: $small-size;
-		line-height: $small-leading;
-		color: rgba(255,255,255,0.86);
+		font-family: $base-sans-serif;
+		font-size: 18px;
+		line-height: 24px;
+		color: $anaplan-white;
+		p {
+			color: $anaplan-white;
+		}
 		a {
-			font-size: $small-size;
-			line-height: $small-leading;
-			font-weight: 300;
-			color: rgba(255,255,255,0.86);
+			padding: 0 5px;
+			color: $anaplan-white;
 			@include on-event {
 				text-decoration: none;
 			}

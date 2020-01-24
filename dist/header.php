@@ -70,28 +70,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<?php //astra_header(); ?>
 
 	<header id="masthead" class="site-header">
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light">
-			<div class="navbar-container">
-				<div class="navbar-container-50 navbar-container--left">
+		<div class="anaplan-navbar">
+			<div class="logo-nav-button">
+				<div class="logo">
 					<?php the_custom_logo(); ?>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse navbar-right" id="navbarNavDropdown">
-						<?php
-						wp_nav_menu( array(
-							'menu'			 =>	'Main Nav',
-							'menu_id'        => 'primary-menu',
-							'menu_class'     => 'navbar-nav',
-						));
-						?>
-					</div>
 				</div>
-				<div class="navbar-container-50 navbar-container--right">
-					<?php get_search_form();?>
-					<div class="login-container"><i></i><a href="">Log-in</a></div>
+				<div id="nav-button" class="nav-button">
+					<img src="/wp-content/themes/astra-child/images/hamburger.svg" alt="Site Navigation"/>
 				</div>
 			</div>
+			<div class="search-login">
+				<div class="search">
+					<form class="search-form" action="https://www.anaplan.com/" method="get">
+						<span class="search-text-wrap">
+							<label for="s" class="screen-reader-text sr-only"></label>
+							<input name="s" class="search-field" type="text" autocomplete="off" value="" placeholder="">
+						</span>
+					</form>
+				</div>
+				<a href="#" class="login">
+					<img src="/wp-content/themes/astra-child/images/login.svg" alt="login">
+					Log-in
+				</a>
+			</div>
+		</div>
+		<nav class="anaplan-nav" id="anaplan-nav">
+			<?php
+			wp_nav_menu( array(
+				'menu'			 =>	'Main Nav',
+				'menu_id'        => 'primary-menu',
+				'menu_class'     => 'navbar-nav',
+			));
+			?>
 		</nav>
 	</header><!-- #masthead -->
 
@@ -113,3 +123,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			searchSelect[0].style.display = "none";
 		}
 	</script>
+	<script>
+    $("#nav-button").click(function () {
+        if ($("#anaplan-nav").first().is(":hidden")) {
+            $("#anaplan-nav").slideDown("fast");
+        } else {
+            $("#anaplan-nav").slideUp("fast");
+        }
+	});
+	$('.drop-down-trigger').click(function (e) {
+		e.preventDefault();
+		console.log();
+		if ( $(this).find('.sub-menu').first().is(":hidden") ) {
+			$(this).find('.sub-menu').slideDown("fast");
+		} else {
+			$(this).find('.sub-menu').slideUp("fast");
+		}
+	});
+</script>
