@@ -1,26 +1,32 @@
 .flip {
   display: flex;
-  justify-content: space-between;
-
-  [class^="flip-container"] {
+  justify-content: center;
+  @include breakpoint(laptop-max) {
+    flex-wrap: wrap;
+  }
+  .flip-container {
     display: flex;
+    margin: 0 20px;
     perspective: 1000px;
     //width: calc(33% - 50px);
+    @include breakpoint(laptop-max) {
+      margin: 20px auto;
+    }
 
-    [class^="card"],
+    .flip-card,
     .front,
     .back {
       width: 300px;
       height: 300px;
     }
 
-    [class^="card"] {
+    .flip-card {
       display: flex;
       flex-direction: column;
       position: relative;
       transition: 0.5s all;
-      transform-style: preserve-3d;
       background-color: rgba(33, 39, 92, 0.5);
+      @include transition(all 0.3s ease-in);
     }
 
     .front, .back {
@@ -34,8 +40,10 @@
       h2,
       h3,
       p {
+        position: relative;
         text-align: center;
         color: #fff;
+        @include transition(all 0.3s ease-in);
       }
 
       h2 {
@@ -45,20 +53,38 @@
     }
 
     .front {
+      h2,
+      h3,
+      p {
+        top: 20px;
+      }
+    }
+    .back {
+      h2,
+      h3,
+      p {
+        top: 0;
+      }
+    }
+
+    .front {
       z-index: 1;
-      transform: rotateY(180deg) translateZ(1px);
+      //transform: rotateY(180deg) translateZ(1px);
       display: flex;
       flex-direction: column;
       justify-content: space-around;
       padding: 20px;
+      opacity: 0;
       background-color: rgba(33, 39, 92, 0.8);
-
+      @include transition(all 0.3s ease-in);
       h2 {
+        margin: 20px 0;
         font-size: 24px;
-        margin-bottom: 0;
       }
 
       h3 {
+        margin: 0;
+        margin-bottom: 10px;
         font-style: normal;
         font-weight: 700;
         font-size: 18px;
@@ -72,11 +98,11 @@
 
       a.overview {
         background-color: $anaplan-red;
-        padding: 0 20px;
+        padding: 5px 20px;
         min-height: 30px;
         border-radius: 15px;
         line-height: 28px;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 700;
         color: #fff;
         transition: all 0.3s;
@@ -90,22 +116,43 @@
 
     .back {
       z-index: 2;
-      transform: rotateY(0deg) translateZ(1px);
+      //transform: rotateY(0deg) translateZ(1px);
       border-bottom: 8px solid $anaplan-red;
       padding: 80px 20px 20px 20px;
+      opacity: 1;
+      @include transition(all 0.3s ease-in);
     }
   }
 
-  .flip-container-one:hover .card-one {
-    transform: rotateY(180deg) translateZ(1px);
+  .flip-container:hover {
+    .flip-card { 
+      cursor: pointer;
+      transform: scale(1.1);
+      .back {
+        opacity: 0;
+        z-index: 1;
+        h2,
+        h3,
+        p {
+          top: 20px;
+        }
+      }
+      .front {
+        opacity: 1;
+        z-index: 2;
+        h2,
+        h3,
+        p {
+          top: 0;
+        }
+      }
+    }
   }
 
-  .flip-container-two:hover .card-two {
+  /*
+  .flip-container:hover .flip-card {
     transform: rotateY(180deg) translateZ(1px);
-  }
+  }*/
 
-  .flip-container-three:hover .card-three {
-    transform: rotateY(180deg) translateZ(1px);
-  }
 }
 

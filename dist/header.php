@@ -47,6 +47,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php
+	$server_uri = $_SERVER['REQUEST_URI'];
+	function hreflang($uri) {
+		echo "<link rel=\"alternate\" href=\"https://www.anaplan.com" . $uri . "\" hreflang=\"x-default\">\n" .
+		"<link rel=\"alternate\" href=\"https://www.anaplan.com" . $uri . "\" hreflang=\"en\">\n" .
+		"<link rel=\"alternate\" href=\"https://www.anaplan.com/de" . $uri . "\" hreflang=\"de-DE\">\n" .
+		"<link rel=\"alternate\" href=\"https://www.anaplan.com/ru" . $uri . "\" hreflang=\"ru-RU\">\n" .
+		"<link rel=\"alternate\" href=\"https://www.anaplan.com/fr" . $uri . "\" hreflang=\"fr-FR\">\n" .
+        "<link rel=\"alternate\" href=\"https://www.anaplan.com/jp" . $uri . "\" hreflang=\"ja-JP\">\n";
+	}
+	hreflang($server_uri);
 	astra_head_bottom();
 	wp_head(); 
 	print $be_ixf->getHeadOpen(); 
@@ -96,11 +106,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		</div>
 		<nav class="anaplan-nav" id="anaplan-nav">
 			<?php
-			wp_nav_menu( array(
-				'menu'			 =>	'Main Nav',
-				'menu_id'        => 'primary-menu',
-				'menu_class'     => 'navbar-nav',
-			));
+				wp_nav_menu( array(
+					'menu'			 =>	'Main Nav',
+					'menu_id'        => 'primary-menu',
+					'menu_class'     => 'navbar-nav',
+				));
 			?>
 		</nav>
 	</header><!-- #masthead -->

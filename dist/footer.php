@@ -37,22 +37,24 @@
 			</div>
 			<div class="container">
 				<div class="row">
-					<div class="social-container">
-						<h4>Social</h4>
-						<ul>
-							<li>
-								<a class="social-media-icon" href="https://www.linkedin.com/company/658814"><i class="fab fa-linkedin-in"></i></a>
-							</li>
-							<li>
-								<a class="social-media-icon" href="https://www.facebook.com/anaplan/"><i class="fab fa-facebook-f"></i></a>
-							</li>
-							<li>
-								<a class="social-media-icon" href="https://www.twitter.com/anaplan"><i class="fab fa-twitter"></i></a>
-							</li>
-							<li>
-								<a class="social-media-icon" href="https://www.instagram.com/anaplanning/"><i class="fab fa-instagram"></i></a>
-							</li>
-						</ul>
+					<div class="col-md-12">
+						<div class="social-container">
+							<h4>Social</h4>
+							<ul>
+								<li>
+									<a class="social-media-icon" href="https://www.linkedin.com/company/658814"><i class="fab fa-linkedin-in"></i></a>
+								</li>
+								<li>
+									<a class="social-media-icon" href="https://www.facebook.com/anaplan/"><i class="fab fa-facebook-f"></i></a>
+								</li>
+								<li>
+									<a class="social-media-icon" href="https://www.twitter.com/anaplan"><i class="fab fa-twitter"></i></a>
+								</li>
+								<li>
+									<a class="social-media-icon" href="https://www.instagram.com/anaplanning/"><i class="fab fa-instagram"></i></a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
