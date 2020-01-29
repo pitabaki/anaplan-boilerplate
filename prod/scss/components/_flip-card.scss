@@ -125,8 +125,7 @@
   }
 
   .flip-container:hover {
-    .flip-card { 
-      cursor: pointer;
+    .flip-card {
       transform: scale(1.1);
       .back {
         opacity: 0;
