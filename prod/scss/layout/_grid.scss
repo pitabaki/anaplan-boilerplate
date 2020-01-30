@@ -4,3 +4,8 @@
         max-width: $max-width;
     }
 }
+.row-reverse {
+	@include breakpoint(tablet-max) {
+        flex-direction: column-reverse;
+    }
+}

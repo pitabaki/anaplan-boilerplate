@@ -1,24 +1,46 @@
 .btn {
-	padding: 20px 40px;
-	@include border-radius(6px);
+	padding: 5px 20px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: $font--medium;
+	color: $white;
+	background-color: $anaplan-teal;
+	border-color: $anaplan-teal;
+	@include border-radius(20px);
+	@include transition(all 0.25s ease-in);
+	@include on-event {
+		background-color: hover_color($anaplan-teal);
+		border-color: hover_color($anaplan-teal);
+	}
 	&.btn-pink,
 	&.btn-primary {
-		font-size: $paragraph-size;
-		line-height: $paragraph-leading;
-		color: #ffffff;
-		background-color: $anaplan-fuchsia;
-		transform: scale(1);
-		@include transition(all 0.25s ease-in);
+		background-color: $anaplan-teal;
+		border-color: $anaplan-teal;
 		@include on-event {
-			transform: scale(1.1);
-			background-color: $anaplan-fuchsia-hover;
+			background-color: hover_color($anaplan-teal);
+			border-color: hover_color($anaplan-teal);
+		}
+	}
+	&.btn-gray {
+		background-color: #707c7c;
+		border-color: #707c7c;
+		color: $white;
+		@include on-event {
+			background-color: hover_color(#707c7c);
+			border-color: hover_color(#707c7c);
+			color: $white;
 		}
 	}
 	&.btn-text {
 		@include on-event {
-			color: $anaplan-fuchsia-hover;
+			color: hover_color($anaplan-teal);
 		}
 	}
+}
+.btn-container {
+	display: inline-block;
+	margin: 0 !important;
+	margin-right: 10px !important;
 }
 
 .ast-button-wrap button.menu-toggle {

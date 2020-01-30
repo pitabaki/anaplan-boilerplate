@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e("#ast-search-form"),e(document).on("submit","form.search-form",function(r){r.preventDefault();var o=window.location.href,n="search/#q="+e(this).find(".search-field").attr("value").replace(/\s/gi,"%20").toLowerCase()+"&sort=relevancy&f:@source=[Anaplan%20website]";return window.location.href=o.substr(0,o.indexOf(".com")+4)+"/"+n,!1})});

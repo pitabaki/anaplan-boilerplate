@@ -133,21 +133,3 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 			searchSelect[0].style.display = "none";
 		}
 	</script>
-	<script>
-    $("#nav-button").click(function () {
-        if ($("#anaplan-nav").first().is(":hidden")) {
-            $("#anaplan-nav").slideDown("fast");
-        } else {
-            $("#anaplan-nav").slideUp("fast");
-        }
-	});
-	$('.drop-down-trigger').click(function (e) {
-		e.preventDefault();
-		console.log();
-		if ( $(this).find('.sub-menu').first().is(":hidden") ) {
-			$(this).find('.sub-menu').slideDown("fast");
-		} else {
-			$(this).find('.sub-menu').slideUp("fast");
-		}
-	});
-</script>

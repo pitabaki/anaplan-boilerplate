@@ -43,8 +43,22 @@ h6,
 p,
 a,
 li {
+	font-family: $base-sans-serif;
 	color: $body-main;
 	font-weight: $regular;
+}
+.entry-content {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	a,
+	li {
+		font-family: $base-sans-serif;
+	}
 }
 button {
 	padding: $button-padding;
@@ -111,4 +125,16 @@ a {
 }
 .header--dark-blue {
 	color: $anaplan-navy-main;
+}
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+	@include breakpoint(desktop) {
+		max-width: $max-width;
+	}
+}
+figure {
+	display: flex;
 }

@@ -1,15 +1,23 @@
 .entry-content {
-    margin-top: 75px;
-    .home-banner {
-        background-image: url(/wp-content/uploads/2020/01/anaplan-home-bg-1.jpg);
-        background-size: cover;
-        padding: 60px 0;
-      
-        h1 {
-          color: #fff;
-          text-align: center;
-          margin-bottom: 45px;
-          font-size: 64px;
-        }
-      }
+  margin-top: 75px;
+  .home-banner {
+    padding: 120px 0;
+    background-image: url('/wp-content/uploads/2020/01/Anaplan_Web__Home_012820_TEMP_MainBanner-scaled.jpg');
+    background-size: cover;
+    background-position: right center;
+    background-color: $body-main-dark;
+    h1 {
+      margin-bottom: 10px;
+      font-size: 54px;
+      line-height: 62px;
+      color: #fff;
+      text-align: left;
+    }
+    p {
+      margin-bottom: 40px;
+      font-size: 24px;
+      line-height: 30px;
+      color: $white;
+    }
+  }
 }

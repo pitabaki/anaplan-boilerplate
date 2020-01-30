@@ -1,0 +1,10 @@
+.backgrounds {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    &.light-blue-gradient {
+        @include gradients('top-right', #021d60, rgba(2, 29, 96, 0));
+    }
+}

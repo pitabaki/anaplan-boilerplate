@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e(document).on("click",'*[value="Global"]',function(n){var t=e('*[for="_ecp_custom_13"]').parents(".tribe-field-type-checkbox").children(".tribe-section-content-field").find("input");!0===e(this).prop("checked")?c(t,0,!0):c(t,0,!1)});var c=function(e,n,t){n<e.length&&(e.eq(n).prop("checked",t),c(e,++n,t))}});

@@ -55,9 +55,10 @@ add_action( 'wp_enqueue_scripts', 'bootstrap_enqueue', 11);
 /**
  * Enqueue styles
  */
-function child_enqueue_styles() {
+function child_enqueue_() {
 
-	wp_enqueue_style( 'anaplan-child-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_ANAPLAN_CHILD_VERSION, 'all' );
+    wp_enqueue_style( 'anaplan-child-theme-css', get_stylesheet_directory_uri() . '/style.css', array('astra-theme-css'), CHILD_THEME_ANAPLAN_CHILD_VERSION, 'all' );
+    wp_enqueue_script( 'anaplan-astra-js', get_stylesheet_directory_uri()  . '/scripts-min.js', array('jquery'));
 
 }
 
@@ -87,7 +88,7 @@ function coveo_support() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
+add_action( 'wp_enqueue_scripts', 'child_enqueue_', 15 );
 
 add_action( 'wp_enqueue_scripts', 'coveo_support', 15);
 
@@ -183,3 +184,9 @@ function swap_content( $content ) {
 }
 
 add_filter('the_content', 'swap_content');
+
+add_filter('the_content', function ($content) {
+    //-- Change src/srcset to data attributes.
+    $content = str_replace('src="', 'style="opacity:0;" data-src="', $content);
+	return str_replace('srcset="', 'data-srcset="', $content);
+});
