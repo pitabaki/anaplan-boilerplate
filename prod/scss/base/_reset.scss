@@ -58,6 +58,15 @@ li {
 	a,
 	li {
 		font-family: $base-sans-serif;
+		color: $body-main-dark;
+	}
+}
+.entry-content {
+	a {
+		color: $anaplan-teal;
+		@include on-event {
+			color: hover_color($anaplan-teal);
+		}
 	}
 }
 button {
@@ -106,7 +115,10 @@ a {
 }
 .standard-section {
 	margin: 0 auto;
-	padding: 60px 0;
+	padding: 120px 0;
+	@include breakpoint(tablet-max) {
+		padding: 80px 0;
+	}
 }
 .container-fixed {
 	display: flex;

@@ -113,6 +113,7 @@
         padding-right: 7px;
     }
 }
+.related-resource-card-container,
 .simple-card-container {
     display: flex;
     justify-content: center;
@@ -121,6 +122,7 @@
     @include breakpoint(tablet-max) {
         flex-wrap: wrap;
     }
+    .related-resource-card,
     .simple-card {
         display: flex;
         margin: 10px;
@@ -145,6 +147,7 @@
         }
         h2,
         p {
+            color: $body-main-dark;
             width: 100%;
         }
         h2 {
@@ -167,6 +170,83 @@
                 @include transition(all 0.3s ease-in);
                 @include on_event {
                     background-color: hover_color($anaplan-teal);
+                }
+            }
+        }
+    }
+}
+.related-resource-card-container {
+    margin: 0 auto;
+    @include breakpoint(laptop-max) {
+        flex-wrap: wrap;
+    }
+    .related-resource-card {
+        margin: 20px;
+        padding: 0;
+        height: auto;
+        max-width: 300px;
+        .related-resource-card--top {
+            position: relative;
+            height: 200px;
+            width: 100%;
+            .related-resource-card-identifier {
+                h3 {
+                    padding-top: 10px;
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: $white;
+                }
+                p {
+                    margin: 0;
+                    margin-top: 30px;
+                }
+                img {
+                    max-height: 80px;
+                    max-width: 130px;
+                }
+            }
+            .related-resource-card-identifier,
+            .related-resource-card-image {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                z-index: 1;
+            }
+            .related-resource-card-image {
+                z-index: 0;
+                background-color: #000000;
+                img {
+                    display: flex;
+                    width: auto;
+                    height: 100%;
+                    max-height: 100%;
+                    opacity: 0.5 !important;
+                }
+            }
+        }
+        .related-resource-card--bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+            height: 180px;
+            padding: 20px;
+            p {
+                margin: 0;
+                padding: 0;
+                font-weight: $font--semi-bold;
+                width: 100%;
+            }
+            .related-resource-cta {
+                display: flex;
+                margin-top: 20px;
+                justify-content: center;
+                text-align: center;
+                color: $anaplan-green;
+                font-weight: $font--semi-bold;
+                @include on_event {
+                    color: hover-color($anaplan-green);
                 }
             }
         }

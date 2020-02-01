@@ -14,9 +14,11 @@
 	}
 	&.btn-pink,
 	&.btn-primary {
+		color: $white;
 		background-color: $anaplan-teal;
 		border-color: $anaplan-teal;
 		@include on-event {
+			color: $white;
 			background-color: hover_color($anaplan-teal);
 			border-color: hover_color($anaplan-teal);
 		}

@@ -10,3 +10,26 @@
 	left: 0;
 	width: 90%;
 }
+.background-image-page-floating--left {
+	background-image: url('/wp-content/uploads/2020/01/Anaplan_Web_DigReivention_CP_honeycomb-bg-comp.jpg');
+    background-position: center center;
+    background-size: cover;
+	background-repeat: no-repeat;
+}
+.background-image-page--top {
+	padding: 160px 0 80px;
+	background-image: url('/wp-content/uploads/2020/01/Anaplan_Web__Home_012820_Final-bg-comp.jpg');
+    background-position: center center;
+    background-size: cover;
+	background-repeat: no-repeat;
+    @include breakpoint(tablet-max) {
+        padding: 60px 0 40px;
+    }
+}
+.background-image-page--bottom {
+    margin-bottom: 160px;
+    background-image: url('/wp-content/uploads/2020/01/Anaplan_Web__Home_012820_Final-bg-footerv2.jpg');
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -1,40 +1,205 @@
 footer {
-    padding: 60px 0;
-    background-color: #021d60;
+	padding: 60px 0;
+    background-color: $anaplan-blue--footer;
+	&.site-footer {
+		position: relative;
+		padding: 90px 0 60px;
+		top: 100%;
+		bottom: 0;
+		width: 100%;
+		background-color: $anaplan-navy-main;
+		h3 {
+			font-size: 19px;
+			font-weight: $bold;
+			color: #ffffff;
+		}
+		li {
+			a {
+				color: #ffffff;
+				text-decoration: none;
+			}
+		}
+		ul {
+			margin: 20px auto;
+			li {
+				margin-bottom: 12px;
+				list-style: none;
+				a {
+					font-size: 14px;
+					line-height: 18px;
+					color: #ffffff;
+					text-decoration: none;
+				}
+			}
+		}
+		.sep {
+			color: $anaplan-navy-main;
+		}
+		.footer-social {
+			.footer-social-wrap {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				li {
+					padding-right: 10px;
+					a {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 1.80px;
+						color: $anaplan-navy-main;
+						width: 36px;
+						height: 36px;
+						background-color: #ffffff;
+						@include border-radius(36px);
+					}
+				}
+				.footer-social-screen-only {
+					position: absolute;
+					top: -10000em;
+					width: 1px;
+					height: 1px;
+					margin: -1px;
+					padding: 0;
+					overflow: hidden;
+					clip: rect(0,0,0,0);
+					border: 0;
+				}
+			}
+		}
+	}
+	.site-info {
+		text-align: center;
+		color: $anaplan-navy-main;
+		font-size: $p-size;
+		line-height: $p-leading;
+		p,
+		a {
+			color: $anaplan-navy-main;
+			font-size: $p-size;
+			line-height: $p-leading;
+		}
+		img {
+			margin: 20px auto 10px;
+			width: 100px;
+		}
+	}
     .social-container {
         h4 {
             font-weight: $bold;
             color: $anaplan-white;
-        }
-    }
-    .footer-nav {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        flex-wrap: wrap;
-    }
-    ul {
-        li {
-            list-style: none;
-            a {
-                color: $anaplan-white;
-                font-weight: $regular;
-            }
-        }
-        > li {
-            padding: 0 30px 30px 0;
-            > a {
-                font-weight: $bold;
-            }
-            > ul {
-                margin: 0;
-                > li {
-                    padding: 0;
-                    > a {
-                        font-weight: $regular;
-                    }
-                }
-            }
-        }
-    }
+		}
+		ul {
+			display: flex;
+			flex-direction: row;
+			li {
+				margin-right: 10px;
+				list-style: none;
+				a {
+					display: flex;
+					width: 30px;
+					height: 30px;
+					justify-content: center;
+					align-items: center;
+					color: $anaplan-blue;
+					background-color: $anaplan-white;
+					border-radius: 30px;
+					i {
+						font-size: 18px;
+						color: $anaplan-blue;
+					}
+				}
+			}
+		}
+	}
+	.menu-footer-menu-container {
+		padding: 0 15px;
+		width: 100%;
+		.footer-nav {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+		ul {
+			li {
+				list-style: none;
+				a {
+					color: $anaplan-white;
+					font-weight: $regular;
+				}
+			}
+			> li {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				width: 25%;
+				@include breakpoint(laptop-max) {
+					width: 50%;
+				}
+				@include breakpoint(tablet-max) {
+					width: 100%;
+				}
+				> a {
+					display: none;
+				}
+				ul {
+					margin: 0;
+					> li {
+						padding: 0 30px 30px 0;
+						width: 100%;
+						> a {
+							display: inline;
+							font-weight: $bold;
+						}
+						> ul {
+							margin: 0;
+							> li {
+								padding: 0;
+								width: 100%;
+								> a {
+									font-weight: $regular;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.site-copyright {
+	padding: 20px;
+	background-color: $anaplan-blue--footer;
+	.site-info {
+		padding: 0;
+		font-family: $base-sans-serif;
+		font-size: 18px;
+		line-height: 24px;
+		color: $anaplan-white;
+		p {
+			color: $anaplan-white;
+		}
+		a {
+			padding: 0 5px;
+			color: $anaplan-white;
+			@include on-event {
+				text-decoration: none;
+			}
+		}
+		&.site-info--right { 
+			@include breakpoint(laptop) {
+				float: right;
+				text-align: right;			
+			}
+		}
+		&.site-info--left { 
+			@include breakpoint(laptop) {
+				float: left;
+				text-align: left;			
+			}
+		}
+	}
 }

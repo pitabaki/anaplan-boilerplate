@@ -2,63 +2,17 @@
     background-color: #f2f2f2;
     @include gradients('top', #f2f2f2, #fcfcfc);
 }
-.entry-content {
-    margin-top: 75px;
-    .home-banner {
-        position: relative;
-        padding: 120px 0;
-        background-image: url('/wp-content/uploads/2020/01/Anaplan_Web__Home_012820_TEMP_MainBanner-scaled.jpg');
-        background-size: cover;
-        background-position: right center;
-        background-color: $anaplan-blue;
-        @include breakpoint(tablet-max) {
-            background-image: none;
-        }
-        .container {
-            position: relative;
-            z-index: 1;
-        }
-        h1 {
-            margin-bottom: 10px;
-            font-size: 54px;
-            line-height: 62px;
-            color: #fff;
-            text-align: left;
-        }
-        p {
-            margin-bottom: 40px;
-            font-size: 24px;
-            line-height: 30px;
-            color: $white;
-        }
-    }
-}
-.standard-section {
-    h3 {
-        font-size: 36px;
-        line-height: 42px;
-        font-weight: $font--bold;
-        color: $body-main-dark;
-    }
-    p {
-        color: #333e48;
-    }
-    .col-md-6 {
-        @include breakpoint(laptop) {
-            padding: 0 20px;
-        }
-    }
-}
 .customer-logos {
     display: flex;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 60px 0 120px;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
     width: 100%;
     max-width: 1280px;
     @include breakpoint(tablet-max) {
+        padding: 30px 0 60px;
         flex-wrap: wrap;
     }
     p {
@@ -81,20 +35,22 @@
         }
     }
 }
+
 #simple-card-section {
     padding: 120px 0 0;
+    @include breakpoint(tablet-max) {
+        padding: 60px 0 0;
+    }
 }
 
 #industry-leadership {
-    padding: 120px 0 60px;
-    background-image: url('/wp-content/uploads/2020/01/Anaplan_Web__Home_012820_Final-bg-comp.jpg');
     h2 {
-        padding: 80px 0;
-        font-size: 42px;
-        line-height: 54px;
-        text-align: center;
+        font-size: 60px;
+        line-height: 66px;
+        width: 100%;
         @include breakpoint(tablet-max) {
-            padding-bottom: 0;
+            font-size: 48px;
+            line-height: 52px;
         }
     }
     [class^=col] {
@@ -103,35 +59,40 @@
         }
     }
 }
-#partners {
-    margin-bottom: 120px;
-    background-image: url('/wp-content/uploads/2020/01/Anaplan_Web__Home_012820_Final-bg-footerv2.jpg');
-    background-position: center bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 #get-started {
     padding: 120px 0;
     background-image: url('/wp-content/uploads/2020/01/Anaplan_Web__Home_012820_get-started-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    @include breakpoint(tablet-max) {
+        padding: 60px 0;
+    }
     h2 {
-        font-size: 42px;
-        line-height: 54px;
+        font-size: 60px;
+        line-height: 66px;
         color: $white;
+        @include breakpoint(tablet-max) {
+            font-size: 48px;
+            line-height: 52px;
+        }
     }
 }
+
 #analysts {
-    padding: 80px 0;
+    padding: 120px 0;
     background-color: $white;
     @include gradients('top', $white, $white);
+    @include breakpoint(tablet-max) {
+        padding: 60px 0;
+    }
 }
 
 .entry-content {
     [class^=col] {
         @include breakpoint(tablet-max) {
             margin-top: 0;
-            margin-bottom: 60px;
+            margin-bottom: 30px;
         }
     }
 }

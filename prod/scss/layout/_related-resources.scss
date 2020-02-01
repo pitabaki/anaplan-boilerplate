@@ -1,0 +1,18 @@
+.related-resources {
+    padding: 120px 0;
+    background-image: url('/wp-content/uploads/2020/01/Anaplan_Web__Home_012820_get-started-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include breakpoint(tablet-max) {
+        padding: 60px 0;
+    }
+    h2 {
+        font-size: 60px;
+        line-height: 66px;
+        color: $white;
+        @include breakpoint(tablet-max) {
+            font-size: 48px;
+            line-height: 52px;
+        }
+    }
+}

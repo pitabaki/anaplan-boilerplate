@@ -6,3 +6,52 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+.standard-section {
+    h3 {
+        font-size: 42px;
+        line-height: 46px;
+        font-weight: $font--bold;
+        color: $body-main-dark;
+    }
+    p {
+        font-size: 24px;
+        line-height: 28px;
+        color: #333e48;
+    }
+    ul {
+        margin-left: 0;
+        width: 80%;
+        @include breakpoint(tablet-max) {
+            margin: 0 auto;
+            width: 100%;
+        }
+        li {
+            padding-bottom: 25px;
+            padding-left: 30px;
+            text-indent: -35px;
+            font-size: 20px;
+            line-height: 24px;
+            list-style: none;
+            &:before {
+                content: "\f00c";
+                margin-right: 10px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                text-indent: 0;
+                font-family: FontAwesome;
+                font-size: 18px;
+                width: 25px;
+                height: 25px;
+                color: $white;
+                background-color: $anaplan-green;
+                border-radius: 25px;
+            }
+        }
+    }
+    .col-md-6 {
+        @include breakpoint(laptop) {
+            padding: 0 20px;
+        }
+    }
+}

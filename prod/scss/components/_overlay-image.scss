@@ -1,4 +1,16 @@
 .overlay-image {
+    position: relative;
+    margin: 0 auto;
+    &.overlay-image--half {
+        margin-right: 0;
+        width: 70%;
+        height: 100%;
+        min-height: 500px;
+        @include breakpoint(tablet-max) {
+            margin: 0 auto;
+            height: 500px;
+        }
+    }
     figure {
         position: relative;
         display: flex;
@@ -13,16 +25,54 @@
         height: 100%;
         width: 200px;
         background-color: rgba(0, 20, 47, .9);
+        &.overlay-text-container--full {
+            padding: 30px;
+            width: 100%;
+            &.overlay-text-container--small {
+                .overlay-text {
+                    width: 100%;
+                    h3,
+                    p {
+                        padding: 0;
+                        text-align: left;
+                    }
+                    h3 {
+                        margin-top: 15px;
+                        font-size: 30px;
+                        line-height: 34px;
+                    }
+                    p {
+                        margin: 0;
+                        padding-bottom: 15px;
+                        font-weight: $font--book;
+                        font-size: 18px;
+                        line-height: 22px;
+                        border: none;
+                        border-bottom: 1px solid $white;
+                    }
+                    img {
+                        margin-top: 30px;
+                        width: 100%;
+                        max-width: 150px;
+                    }
+                    &:last-child {
+                        p {
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
         &.overlay-text-container--right {
-            right: 20px;
+            right: 0;
             @include breakpoint(tablet-max) {
-                right: 15px;
+                right: 0;
             }
         }
         &.overlay-text-container--left {
-            left: 20px;
+            left: 0;
             @include breakpoint(tablet-max) {
-                left: 15px;
+                left: 0;
             }
         }
         .overlay-text {

@@ -2,7 +2,36 @@
 .content-column-center {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     @include breakpoint(tablet-max) {
         margin: 20px 0;
+    }
+    img {
+        width: 100%;
+    }
+    .content-text-center {
+        width: 100%;
+        h2 {
+            font-size: 36px;
+            line-height: 40px;
+        }
+        h2,
+        h3 {
+            padding-bottom: 30px;
+        }
+        h2,
+        h3,
+        p {
+            text-align: center;
+            width: 100%;
+        }
+        ul {
+            margin-left: 0;
+            width: 80%;
+            @include breakpoint(tablet-max) {
+                margin: 0 auto;
+                width: 100%;
+            }
+        }
     }
 }
